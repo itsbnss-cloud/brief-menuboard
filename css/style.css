@@ -101,10 +101,10 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 0.85rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  background: rgba(8,8,8,0.85);
+  background: rgba(8,8,8,0.9);
   border-bottom: 1px solid var(--border);
 }
 
@@ -123,14 +123,16 @@ body {
 }
 
 .nav-logo-mark {
-  height: 34px;
+  height: 30px;
   width: auto;
+  display: block;
 }
 
 .nav-logo-sep {
   width: 1px;
-  height: 20px;
+  height: 18px;
   background: #2a2a2a;
+  flex-shrink: 0;
 }
 
 .nav-logo-studio {
@@ -160,7 +162,7 @@ body {
    HERO
    ============================================================ */
 .hero {
-  padding: 2.5rem 1.5rem 1.5rem;
+  padding: 2rem 1.5rem 1.5rem;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.7s ease forwards 0.1s;
@@ -170,33 +172,50 @@ body {
   max-width: 600px;
   margin: 0 auto;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
-.hero-content {
+.hero-text {
   flex: 1;
   min-width: 0;
 }
 
 .hero-logo {
-  width: 100%;
-  max-width: 280px;
-  height: auto;
-  margin-bottom: 0.9rem;
   display: block;
+  width: 170px;
+  height: auto;
+  margin-bottom: 0.75rem;
 }
 
-.hero-character {
-  flex-shrink: 0;
-  width: 130px;
+.hero h1 {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--y);
+}
+
+.hero p {
+  font-size: 12px;
+  color: var(--muted2);
+  line-height: 1.65;
+  max-width: 280px;
 }
 
 .character-img {
-  width: 130px;
-  height: auto;
   display: block;
-  filter: drop-shadow(0 8px 24px rgba(245,166,35,0.25));
+  width: 110px;
+  height: auto;
+  flex-shrink: 0;
+  filter: drop-shadow(0 6px 20px rgba(245,166,35,0.2));
   animation: float 3.5s ease-in-out infinite;
 }
 
@@ -220,13 +239,6 @@ body {
 @keyframes blink {
   0%,100% { opacity: 1; }
   50%      { opacity: 0.3; }
-}
-
-.hero p {
-  font-size: 12px;
-  color: var(--muted2);
-  max-width: 260px;
-  line-height: 1.65;
 }
 
 /* ============================================================
@@ -649,10 +661,9 @@ textarea { resize: vertical; min-height: 90px; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 480px) {
-  .hero-inner     { gap: 1rem; }
-  .hero-logo      { max-width: 200px; }
-  .hero-character { width: 90px; }
-  .character-img  { width: 90px; }
+  .hero-logo      { width: 130px; }
+  .character-img  { width: 80px; }
+  .hero h1        { font-size: 22px; }
   .sdot-label     { display: none; }
   .step-title     { font-size: 18px; }
   .card           { padding: 1.5rem; }

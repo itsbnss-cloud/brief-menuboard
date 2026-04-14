@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brief Menu Board — Jeune Designer Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Fond animé -->
+  <div class="bg-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+  <canvas id="particles"></canvas>
+
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <header class="hero" id="hero">
+      <div class="badge">
+        <span class="dot"></span>
+        Jeune Designer Studio
+      </div>
+      <h1>Brief <em>Menu Board</em></h1>
+      <p>Quelques questions pour créer un menu board parfaitement adapté à votre identité.</p>
+    </header>
+
+    <!-- PROGRESS -->
+    <div class="prog-wrap">
+      <div class="prog-steps" id="pdots"></div>
+      <div class="prog-bar"><div class="prog-fill" id="pfill"></div></div>
+    </div>
+
+    <!-- CARD -->
+    <div class="card-wrap">
+      <div class="card" id="card"></div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
